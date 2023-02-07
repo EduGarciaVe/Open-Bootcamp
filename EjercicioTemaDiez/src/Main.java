@@ -33,5 +33,16 @@ public class Main {
 
         System.out.println("Cadena Invertida :" + reves);
 
+        //1.
+
+        String [] palabras = {"Uno", "Dos","Tres","Cuatro"};
+
+        for (String leePalabra: palabras
+             ) {
+            System.out.println(leePalabra);
+        }
+
+        //2.
+
     }
 }
