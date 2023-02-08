@@ -101,5 +101,21 @@ public class Main {
         for (String linked : linkedList){
             System.out.println("Valores de LinkedList son :"+ linked);
         }
+        System.out.println("----------------");
+        //6.Crea un ArrayList de tipo int, y, utilizando un bucle rellénalo con elementos 1..10. A continuación, con otro bucle, recórrelo y elimina los numeros pares. Por último, vuelve a recorrerlo y muestra el ArrayList final. Si te atreves, puedes hacerlo en menos pasos, siempre y cuando cumplas el primer "for" de relleno.
+        ArrayList<Integer> numero = new ArrayList<Integer>();
+
+        int i = 1;
+        while(i<=10){
+            numero.add(i-1,i);
+            i++;
+
+        }
+        System.out.println("El Arraylist quedo relleno asi: "+ numero);
+
+        numero.removeIf(valorNumero -> valorNumero % 2 == 0);
+        System.out.println("Se eliminaron los numeros pares");
+
+        System.out.println("El ArrayList quedó Finalmente sin pares con los siguientes valores :"+ numero);
+        }
     }
-}
