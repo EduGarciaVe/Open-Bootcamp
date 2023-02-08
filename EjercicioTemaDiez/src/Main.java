@@ -76,6 +76,9 @@ public class Main {
             System.out.println("El resultado es: "+resu);
         }
 
-
+        //4. Indica cuál es el problema de utilizar un Vector con la capacidad por defecto si tuviésemos 1000 elementos para ser añadidos al mismo.
+        /*
+        El problema de utilizar un Vector con la capacidad por defecto (10) es que se tiene que ampliar y copiar tantas veces para llegar a 1000 elementos. Hará un consumo excesivo de recursos.
+         */
     }
 }
