@@ -1,3 +1,5 @@
+import java.util.Vector;
+
 public class Main {
 
     /**
@@ -56,5 +58,24 @@ public class Main {
                 System.out.println("Los valores del arreglo bidimensional son: "+arrBid[i][j]);
             }
         }
+
+
+        //3. Crea un "Vector" del tipo de dato que prefieras, y añádele 5 elementos. Elimina el 2o y 3er elemento y muestra el resultado final.
+
+        Vector<String> vectore = new Vector(5);
+            vectore.add("Gracias");
+            vectore.add("Microsoft");
+            vectore.add("Google");
+            vectore.add("Open-Bootcamp");
+            vectore.add("Por los Cursos");
+
+            vectore.remove(1);
+            vectore.remove(2);
+
+        for (String resu : vectore){
+            System.out.println("El resultado es: "+resu);
+        }
+
+
     }
 }
