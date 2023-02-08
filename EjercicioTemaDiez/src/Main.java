@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Vector;
 
 public class Main {
@@ -43,7 +45,8 @@ public class Main {
              ) {
             System.out.println(leePalabra);
         }
-
+        System.out.println("\n" +
+                "---------------");
         //2.
         int[][] arrBid = new int[2][3];
         arrBid [0][0] = 1;
@@ -58,7 +61,8 @@ public class Main {
                 System.out.println("Los valores del arreglo bidimensional son: "+arrBid[i][j]);
             }
         }
-
+        System.out.println("\n" +
+                "---------------");
 
         //3.
 
@@ -75,10 +79,27 @@ public class Main {
         for (String resu : vectore){
             System.out.println("El resultado es: "+resu);
         }
-
+        System.out.println("\n" +
+                "---------------");
         //4. Indica cuál es el problema de utilizar un Vector con la capacidad por defecto si tuviésemos 1000 elementos para ser añadidos al mismo.
         /*
         El problema de utilizar un Vector con la capacidad por defecto (10) es que se tiene que ampliar y copiar tantas veces para llegar a 1000 elementos. Hará un consumo excesivo de recursos.
          */
+
+        //5. Crea un ArrayList de tipo String, con 4 elementos. Cópialo en una LinkedList. Recorre ambos mostrando únicamente el valor de cada elemento.
+        ArrayList<String> arrayList = new ArrayList<String>(4);
+        arrayList.add("Hola");
+        arrayList.add("Mundo");
+        arrayList.add("Como");
+        arrayList.add("estas?");
+
+        LinkedList<String> linkedList = new LinkedList<String>(arrayList);
+        for (String arrList : arrayList){
+            System.out.println("El valor del ArrayList es :"+ arrList);
+        }
+        System.out.println("----------------");
+        for (String linked : linkedList){
+            System.out.println("Valores de LinkedList son :"+ linked);
+        }
     }
 }
