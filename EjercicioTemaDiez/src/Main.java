@@ -43,6 +43,18 @@ public class Main {
         }
 
         //2.
+        int[][] arrBid = new int[2][3];
+        arrBid [0][0] = 1;
+        arrBid [0][1] = 2;
+        arrBid [0][2] = 3;
+        arrBid [1][0] = 4;
+        arrBid [1][1] = 5;
+        arrBid [1][2] = 6;
 
+        for (int i = 0; i < arrBid.length; i++){
+            for (int j= 0; j < arrBid[i].length; j++){
+                System.out.println("Los valores del arreglo bidimensional son: "+arrBid[i][j]);
+            }
+        }
     }
 }
