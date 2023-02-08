@@ -1,3 +1,4 @@
+import java.io.*;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Scanner;
@@ -112,16 +113,39 @@ public class Main {
         System.out.println("----------------");
         //7. Crea una función DividePorCero. Esta, debe generar una excepción ("throws") a su llamante del tipo ArithmeticException que será capturada por su llamante (desde "main", por ejemplo).
         // Si se dispara la excepción, mostraremos el mensaje "Esto no puede hacerse". Finalmente, mostraremos en cualquier caso: "Demo de código".
+        System.out.println("DividePorCero(6 / 0)");
         DividePorCero(6,0);
+        System.out.println("----------------");
+        System.out.println("DividePorCero(6 / 2)");
         DividePorCero(6,2);
-
+        System.out.println("----------------");
+        //8. Utilizando InputStream y PrintStream, crea una función que reciba dos parámetros: "fileIn" y "fileOut".
+        // La tarea de la función será realizar la copia del fichero dado en el parámetro "fileIn" al fichero dado en "fileOut".
+            try {
+                InputStream fileIn = new FileInputStream("/etc/passwd");
+                    System.out.println("Archivo encontrado");
+                    byte [] dato = fileIn.readAllBytes();
+                    fileIn.close();
+                PrintStream fileOut = new PrintStream("nuevoFichero.txt");
+                fileOut.write(dato);
+                fileOut.close();
+                System.out.println("Copia Realizada con Exito");
+                }catch (Exception e){
+                System.out.println("Archivo no copiado");
+                }
 
         }
+
+
+
+
+
 
         public static int DividePorCero(int a, int b) throws ArithmeticException{
             int result =0;
             try {
                 result= a / b;
+                System.out.println("El resultado de la vision es: " + result);
 
             } catch (ArithmeticException e){
                 System.out.println("Esto no puede hacerse");
