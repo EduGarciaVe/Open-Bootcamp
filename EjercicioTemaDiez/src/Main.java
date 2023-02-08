@@ -118,6 +118,7 @@ public class Main {
         System.out.println("----------------");
         System.out.println("DividePorCero(6 / 2)");
         DividePorCero(6,2);
+
         System.out.println("----------------");
         //8. Utilizando InputStream y PrintStream, crea una función que reciba dos parámetros: "fileIn" y "fileOut".
         // La tarea de la función será realizar la copia del fichero dado en el parámetro "fileIn" al fichero dado en "fileOut".
@@ -133,6 +134,32 @@ public class Main {
                 }catch (Exception e){
                 System.out.println("Archivo no copiado");
                 }
+        System.out.println("----------------");
+        //9. Sorpréndenos creando un programa de tu elección que utilice InputStream, PrintStream, excepciones,
+        // un HashMap y un ArrayList, LinkedList o array.
+        Scanner scan = new Scanner(System.in);
+        ArrayList<String> nombre = new ArrayList<String>();
+        System.out.println("Ingresa 3 nombres al azar");
+        nombre.add(0, scan.nextLine());
+        nombre.add(1, scan.nextLine());
+        nombre.add(2, scan.nextLine());
+        scan.close();
+
+
+
+        try{
+
+            PrintStream documento =  new PrintStream("ingresos.txt");
+        for (String nomReco : nombre){
+               new PrintStream(documento).println(nomReco);
+        }
+            documento.close();
+            }catch(Exception e){
+                System.out.println("Lista no pudo ser copiada");
+            }
+
+
+
 
         }
 
